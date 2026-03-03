@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/WrapperComponents/Navbar";
+import Footer from "@/components/WrapperComponents/Footer";
+import SmoothScroll from "@/components/WrapperComponents/SmoothScroll";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter.variable} ${inter.className} antialiased`} suppressHydrationWarning>
+        <SmoothScroll>
+          <Navbar/>
+          {children}
+          <Footer/>
+        </SmoothScroll>
       </body>
     </html>
   );
