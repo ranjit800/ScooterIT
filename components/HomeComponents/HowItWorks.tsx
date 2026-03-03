@@ -28,14 +28,14 @@ const steps = [
     stepLabel: "Step 1",
   },
   {
-    title: <>Unlock<br/>Instantly</>,
+    title: "Unlock Instantly",
     description: "Scan QR or connect via Bluetooth to start your ride.",
     mainImg: Step2Img,
     subImg: Step2ImgSub,
     stepLabel: "Step 2",
   },
   {
-    title: <>Ride<br/>Seamlessly</>,
+    title: "Ride Seamlessly",
     description: "Live tracking, pause anytime, follow smart parking zones.",
     mainImg: Step3Img,
     subImg: Step3ImgSub,
@@ -89,7 +89,7 @@ const StepCard = ({ step, index }: { step: any, index: number }) => {
 
   return (
     <motion.div 
-      className="w-[33vh] h-[38vh] rounded-2xl flex flex-col relative shrink-0"
+      className="w-[33vh] h-[41vh] rounded-2xl flex flex-col relative shrink-0"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0 }}
@@ -142,12 +142,14 @@ const StepCard = ({ step, index }: { step: any, index: number }) => {
 
       {/* Bottom Section (White) */}
       <div className="w-full h-1/2 bg-white rounded-b-2xl p-6 pb-14 grow text-left relative flex flex-col justify-start">
-        <h3 className="text-xl font-bold text-[#2F401A] mb-3 leading-tight ">
+       <div className="flex flex-col w-full">
+         <p className="text-xl font-bold text-[#2F401A] mb-3 leading-tight whitespace-nowrap">
           {step.title}
-        </h3>
-        <p className="text-[#2F401A]/80 text-sm font-medium leading-normal">
-          {step.description}
         </p>
+        <span className="text-[#2F401A]/80 text-sm font-medium leading-normal">
+          {step.description}
+        </span>
+       </div>
       </div>
     </motion.div>
   );
