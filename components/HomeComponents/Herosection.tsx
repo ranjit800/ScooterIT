@@ -2,20 +2,14 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { motion, Variants, useInView } from 'framer-motion'
-import { useRef, useState, useEffect } from 'react'
+import { motion, Variants } from 'framer-motion'
+
+import HeroImg from '@/public/Images/HeroImg.gif'
+import HeroImgUpperLayer from '@/public/Images/HeroImgUpperLayer.png'
+import downloadIcon from '@/public/Images/Icons/downlodeAppIcon.png'
+import partnerIcon from '@/public/Images/Icons/becomAIcon.png'
 
 const Herosection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.1 });
-  const [animationKey, setAnimationKey] = useState(0);
-
-  useEffect(() => {
-    if (isInView) {
-      setAnimationKey(prev => prev + 1);
-    }
-  }, [isInView]);
-
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -51,20 +45,18 @@ const Herosection = () => {
     },
   };
 
-
   return (
-    <section ref={ref} className="sticky top-0 h-[calc(100vh-1vh)] z-0 bg-black pl-3 pr-3 pt-3 pb-3">
+    <section className="sticky top-0 h-[calc(100vh-1vh)] z-0 bg-black pl-3 pr-3 pt-3 pb-3">
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-4xl">
         {/* Background GIF */}
         <motion.div 
-          key={`bg-${animationKey}`}
           className="absolute inset-0 z-0"
           initial="hidden"
           animate="visible"
           variants={imageVariants}
         >
           <Image 
-            src="/Images/HeroImg.gif" 
+            src={HeroImg} 
             alt="Hero Background" 
             fill 
             priority
@@ -74,14 +66,13 @@ const Herosection = () => {
 
         {/* Upper Layer Image/Overlay */}
         <motion.div 
-          key={`overlay-${animationKey}`}
           className="absolute inset-0 z-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.6 }}
           transition={{ duration: 2, delay: 0.5 }}
         >
           <Image 
-            src="/Images/HeroImgUpperLayer.png" 
+            src={HeroImgUpperLayer} 
             alt="Hero Overlay" 
             fill 
             className="object-cover"
@@ -93,7 +84,6 @@ const Herosection = () => {
 
         {/* Content */}
         <motion.div 
-          key={`content-${animationKey}`}
           className="relative z-20 container mx-auto px-6 text-center max-w-4xl pt-20"
           initial="hidden"
           animate="visible"
@@ -123,7 +113,7 @@ const Herosection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Image 
-                src="/Images/Icons/downlodeAppIcon.png" 
+                src={downloadIcon} 
                 alt="Download App Icon" 
                 width={24} 
                 height={24} 
@@ -137,7 +127,7 @@ const Herosection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Image 
-                src="/Images/Icons/becomAIcon.png" 
+                src={partnerIcon} 
                 alt="Become Partner Icon" 
                 width={24} 
                 height={24} 

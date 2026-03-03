@@ -4,6 +4,9 @@ import Image from 'next/image'
 import { Check } from 'lucide-react'
 import { motion, Variants } from 'framer-motion'
 
+import fleetMobile from "@/public/Images/b.png"
+import fleetDesktop from "@/public/Images/BuiltForFleetImg.png"
+
 const BuiltForFleet = () => {
   const features = [
     "Monitor fleet status",
@@ -74,7 +77,7 @@ const BuiltForFleet = () => {
               variants={imageVariants}
             >
               <Image 
-                src="/Images/b.png" 
+                src={fleetMobile} 
                 alt="Partner Dashboard Mobile" 
                 fill 
                 className="object-contain"
@@ -121,7 +124,7 @@ const BuiltForFleet = () => {
           variants={imageVariants}
         >
           <Image 
-            src="/Images/BuiltForFleetImg.png" 
+            src={fleetDesktop} 
             alt="Partner Dashboard" 
             width={1000}
             height={800}

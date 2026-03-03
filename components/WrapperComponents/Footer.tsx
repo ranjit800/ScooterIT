@@ -4,6 +4,11 @@ import Image from 'next/image'
 import { Phone, Mail } from 'lucide-react'
 import { motion, Variants } from 'framer-motion'
 
+import logo from "@/public/Images/logo.png"
+import downloadIcon from "@/public/Images/Icons/downlodeAppIcon.png"
+import footerBg from "@/public/Images/footerbottomLayer.png"
+import footerGraphic from "@/public/Images/FooterBottomImage.png"
+
 const Footer = () => {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -56,7 +61,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className=" p-3 rounded-lg">
                 <Image 
-                  src="/Images/logo.png" 
+                  src={logo} 
                   alt="ScooterIT Logo" 
                   width={150}
                   height={150}
@@ -76,7 +81,7 @@ const Footer = () => {
                 whileTap={{ scale: 0.95 }}
               >
                  <Image 
-                   src="/Images/Icons/downlodeAppIcon.png" 
+                   src={downloadIcon} 
                    alt="Download App Icon" 
                    width={20} 
                    height={20} 
@@ -256,7 +261,7 @@ const Footer = () => {
       >
          {/* Background Layer */}
          <Image 
-            src="/Images/footerbottomLayer.png" 
+            src={footerBg} 
             alt="ScooterIT Footer Background Layer" 
             fill 
             className="object-cover object-bottom z-0"
@@ -270,7 +275,7 @@ const Footer = () => {
            transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
          >
            <Image 
-              src="/Images/FooterBottomImage.png" 
+              src={footerGraphic} 
               alt="ScooterIT Footer Graphic" 
               fill 
               className="object-contain object-bottom"

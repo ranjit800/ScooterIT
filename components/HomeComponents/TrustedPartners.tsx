@@ -6,13 +6,21 @@ import { motion, useScroll, useTransform, Variants } from 'framer-motion'
 import { Check } from 'lucide-react';
 import Marquee from "react-fast-marquee";
 
+import partnersOne from "@/public/Images/PartnersImages/partnersOne.png"
+import partnersTwo from "@/public/Images/PartnersImages/partnersTwo.png"
+import partnersThree from "@/public/Images/PartnersImages/partnersThree.png"
+import partnersFour from "@/public/Images/PartnersImages/partnersFour.png"
+import partnersFive from "@/public/Images/PartnersImages/partnersFive.png"
+import partnersSix from "@/public/Images/PartnersImages/partnersSix.png"
+
+
 const partnerLogos = [
-  "/Images/PartnersImages/partnersOne.png",
-  "/Images/PartnersImages/partnersTwo.png",
-  "/Images/PartnersImages/partnersThree.png",
-  "/Images/PartnersImages/partnersFour.png",
-  "/Images/PartnersImages/partnersFive.png",
-  "/Images/PartnersImages/partnersSix.png",
+  partnersOne,
+  partnersTwo,
+  partnersThree,
+  partnersFour,
+  partnersFive,
+  partnersSix,
 ]
 
 const TrustedPartners = () => {

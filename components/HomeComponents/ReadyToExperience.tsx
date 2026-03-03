@@ -3,6 +3,8 @@ import React from 'react'
 import Image from 'next/image'
 import { motion, Variants } from 'framer-motion'
 
+import readyImg from "@/public/Images/ready.png"
+
 const ReadyToExperience = () => {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -53,7 +55,7 @@ const ReadyToExperience = () => {
           <div className="absolute inset-0 bg-linear-to-r from-black via-black/80 to-transparent z-10 hidden md:block"></div>
           <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent z-10 md:hidden"></div>
           <Image 
-            src="/Images/ready.png" 
+            src={readyImg} 
             alt="Ready to Experience" 
             fill 
             className="object-cover object-center md:object-right" 
