@@ -162,11 +162,11 @@ const Footer = () => {
 
           {/* Mobile Only: Buttons at the bottom of the content area */}
           <motion.div 
-            className="flex lg:hidden flex-col gap-4 w-full mt-2"
+            className="flex lg:hidden flex-col gap-4 mt-2"
             variants={fadeUpVariants}
           >
             <motion.button 
-              className="w-full flex items-center justify-center gap-2 bg-[#C2F865] text-[#1a1a1a] px-6 py-4 rounded-xl font-semibold text-[15px] hover:bg-[#b5eb5a] transition-colors"
+              className="w-fit flex items-center justify-center gap-2 bg-[#C2F865] text-[#1a1a1a] px-6 py-4 rounded-xl font-semibold text-[15px] hover:bg-[#b5eb5a] transition-colors"
               whileTap={{ scale: 0.98 }}
             >
               <svg viewBox="0 0 384 512" className="w-4 h-4 shrink-0" fill="currentColor">
@@ -175,7 +175,7 @@ const Footer = () => {
               Download the App
             </motion.button>
             <motion.button 
-              className="w-full flex items-center justify-center bg-[#2F401A] text-white px-6 py-4 rounded-xl font-semibold text-[15px] hover:bg-[#3d5225] transition-colors"
+              className="w-fit flex items-center justify-center bg-[#2F401A] text-white px-6 py-4 rounded-xl font-semibold text-[15px] hover:bg-[#3d5225] transition-colors"
               whileTap={{ scale: 0.98 }}
             >
               Become a Fleet Partner
